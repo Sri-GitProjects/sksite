@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SK Holidayss</title>
+    <style>
+    #package_list{
+        display:flex;
+        flex-direction:column;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        padding: 0px;
+    }
+      #package_list a{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: small;
+      }
+      #package_list a>p{
+          margin: 0px;
+          font-size: medium;
+      }
+      #color-cards{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+      table{
+          display: flex;
+          width: 100%;
+      }
+      table div{
+          /*display: flex;*/
+          justify-content: space-between;
+          align-items:center;
+      }
+      table a{
+          text-decoration: none;
+          color: black;
+          /*border: 1px solid #faea0c;*/
+          padding: 5px;
+          margin-top:10px;
+          /*margin: 20px !important;*/
+      }
+      table a:hover{
+          font-size:medium;
+          background-color: #faea0c;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          padding: 10px;
+          border-radius: 10px;
+          z-index:99;
+      }
+      #tables{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          }
+    </style>
+    <link href="../styles.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+ <!-- menubar -->
+ <nav class="navbar navbar-expand-lg navbar-light bg-light p-0" style="z-index: 1000; position:sticky; top: 0;">
+  <div class="container-fluid" style="background-color: white; width:100%;">
+    
+    <div class="logo_cont" style="width:30%; margin:0px;">
+      <img src="./logo/Logo_gold.png">
+      
+      <!-- <a class="navbar-brand"  href="#">SK Holidayss</a> -->
+    </div>
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="menu_bar collapse navbar-collapse" style="width:40%;" id="navbarTogglerDemo">
+      <ul class="nav justify-content-end">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="../index.html">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">GROUP TOUR</a>
+        </li>
+        <li class="nav-item">
+          <div class="dropdown">
+            <a class="nav-link btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">TOURS</a>
+            <div class="dropdown-menu">
+                <ul>
+                    <li><a href="#international">International</a></li>
+                    <li><a href="#domestic">Domestic</a></li>
+                </ul>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/Spiritual/Spiritual.html">SPIRITUAL TOUR</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/Honeymoon/Honeymoon.html">HONEYMOON</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">CRUISE</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">CONTACT</a>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#" style="text-decoration:none; color:Navy; margin:auto;">Agent Login</a></li>
+      </ul>
+    </div>
+    
+    
+  </div>
+</nav>
+
+  <!-- connect -->
+   <div class="container" style="display:flex; text-align:center;flex-direction:column; height:400px; justify-content:center;">
+   <h4>Coorg & Mysore Package List</h4>
+  <div class="list-group container" id="package_list">
+    <a href="./andaman_packages(basic)/index.html" class="list-group-item list-group-item-action" aria-current="true">
+      <!--<img src="../package.jpg" alt=""/>-->
+      <p> Package 1</p>6 Night / 7 Days</a>
+    <a href="#" class="list-group-item list-group-item-action" aria-current="true" >
+      <!--<img src="../package.jpg" alt=""/>-->
+      <p> Loyalty </p>Get Exclusive Offers</a>
+    </div>
+</div>
+
+
+<!--suggested-->
+<div class="container pt-5" id="tables"><h3>Also Suggestion:</h3>
+<table class="container">
+  <tbody>
+    <tr>
+      <!--<th scope="row">Domestic</th>-->
+      <td>
+        <div><a href="../SK_Andaman/connectandaman.html">Andaman</a> | <a href="../SK_Goa/connectGoa.html">Goa</a> | <a href="../SK_Kerala/connectkerala.html">Kerala</a> | <a href="../SK_Kolkata/connectKolkata.html">Kolkata</a> | <a href="../SK_Amritsar/connectamristar.html">Amristar</a> | <a href="../SK_Jammu/connectDelhi.html">Jammu & Kashmir</a> | <a href="../SK_Darjeeling/connectDarjeeling.html">Darjeeling & Sikkim</a> | <a href="../SK_Gulmarg/connectGulmarg.html">Gulmarg</a> | <a href="../SK_Jaipur/connectJaipur.html">Jaipur</a> | <a href="../SK_Jaisalmer/connectJaislmer.html">Jaisalmar </a> | <a href="../SK_Mahabaleshwar/connectMahabaleshwar.html">Mahabaleshwar</a> | <a href="../SK_Rajasthan/connectRajasthan.html">Rajasthan</a> | <a href="../SK_Golden Triangle/connectGolden triangle.html">Golden Triangle</a> | <a href="../SK_7 Sister/connect7Sister.html">7 Sisters</a> | <a href="../Sk_Lakshadweep/connectLakshadweep.html">Lakshadweep</a> | <a href="../SK_Delhi/connectDelhi.html">Delhi & Agra</a> | <a href="../SK_Leh Ladakh/connectLehLadakh.html">Leh Ladakh</a>
+        </div>
+      </td>
+      <!-- <td>Otto</td>
+      <td>@mdo</td> -->
+    </tr>
+    
+  </tbody>
+</table>
+</div>
+
+<!-- foot -->
+<div class="container-fluid d-flex address_bar" style="padding:20px 5px;">
+  <div class="container">
+    <div class="row" id="footer_area">
+     <div class="col-lg-4 service_sk">
+      <h3>Our Services:</h3>
+      <ul>
+        <li>Family Tour Packages</li>
+        <li>Group Tour Packages</li>
+        <li>Honeymoon Tour Packages</li>
+        <li>Spiritual Tour Packages</li>
+        <li>Cruise Tour Packages</li>
+      </ul></div>
+      <div class="col-lg-4">
+        <h3>Address:</h3>
+        <h5>SK Holidays Travel Pvt Ltd</h5>
+        <p>2nd Floor, Vallalar Complex,<br> Kamarajar Arch,<br> Perambalur - 621212</p>
+        <p>Call: +91 97505 26684</p>
+        <p>Email: skholidaysspvtltd@gmail.com</p>
+      </div>
+      <div class="col-lg-4">
+        <h3>Location</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3913.3205958370813!2d78.86391837573964!3d11.237809950512597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bab1bd608cb0a5d%3A0xd914d102120b8627!2sSK%20Holidays%20Travel%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1743346564179!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="col-lg-8 d-flex justify-content-left align-items-center" id="foot-logo">
+        <img src="logo/Logo_gold.png" alt="logo">
+        <!-- <h1>SK Holidays Pvt Ltd</h1> -->
+      </div>
+      <!-- <div class="col-4"></div> -->
+      <div class="col-lg-4 foot_icons">
+        <h3>Social Links</h3>
+      <a href=""><img src="Icons/facebook.png"></a>
+      <a href=""><img src="Icons/instagram.png"></a>
+      <a href=""><img src="Icons/whatsapp.png"></a>
+      <a href=""><img src="Icons/youtube.png"></a>
+      </div>
+      <!-- <div class="col-4">5</div> -->
+    </div>
+  </div>
+ </div>
+<!-- powered -->
+ <div class="container-fluid" style="display: flex; justify-content: center; padding: 0px 50px; background-color: gold; font-size: small;">
+  <p>Powered by Gurushasta Innotech</p>
+ </div>
+
+   <script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

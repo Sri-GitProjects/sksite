@@ -1,0 +1,82 @@
+
+.package{
+    /* border: 2px solid black; */
+    display: flex;
+    margin: 15px 0px;
+}
+.package-card a{
+    margin: 5px 0px;
+    background-color:gold;
+    color: navy;
+    font-weight:550;
+    width: 100%;
+    border: 0;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.package-card a:hover{
+    color: navy;
+    background-color: gold;
+    font-size: 18px;
+}
+.package-card p{
+    font-weight: 350;
+    font-size: smaller;
+}
+.package-card h3{
+    font-size: 25PX;
+    /* font-weight: bold; */
+    color: navy;
+}
+.package-itinerary{
+    background-color: gold;
+    height: 300px;
+    justify-content: center;
+}
+.nav-pills a{
+    color:navy;
+    font-weight: bold;
+    font-size: medium;
+    height: 50px;
+    width: 220px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.nav-pills a:hover{
+    background-color: gold;
+    color:navy;
+}
+.scrollspy-example h4{
+    color:navy;
+    font-weight: bold;
+}
+.itinerary_list li{
+    background-color: gold;
+    color: navy;
+    border-radius: 5px;
+    padding: 2px 8px;
+}
+.carousel-inner img{
+    border-radius: 10px;
+}
+.basic_pack{
+    flex-direction: column; 
+    top: 0; 
+    position: sticky; 
+    padding: 20px 0px;
+    height: 650px;
+}
+.breadcrumb{
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-top: 8px;
+    border: 2px solid gold;
+}
+.breadcrumb a{
+    text-decoration: none;
+}

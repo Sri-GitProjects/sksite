@@ -1,0 +1,1668 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SK Holidays Travel Pvt Ltd</title>
+    <link href="styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <style>
+    #Blogs_one{
+        display: flex;
+    }
+          .blog-section {
+    padding: 80px 20px;
+    /*max-width: 1200px;*/
+    margin: 0 auto;
+  }
+  
+  .section-header {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    border-radius: 2px;
+  }
+  
+  .section-subtitle {
+    font-size: 1.1rem;
+    color: var(--gray);
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+  }
+  
+  .blog-card {
+    background: white;
+    border-radius: var(--card-radius);
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .blog-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-image-container {
+    height: 220px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+  }
+  
+  .blog-card:hover .card-image {
+    transform: scale(1.1);
+  }
+  
+  .card-category {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--secondary);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-content {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card-date {
+    font-size: 0.85rem;
+    color: var(--gray);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .card-date i {
+    margin-right: 8px;
+    color: var(--primary);
+  }
+  
+  .card-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--dark);
+    transition: var(--transition);
+  }
+  
+  .blog-card:hover .card-title {
+    color: var(--primary);
+  }
+  
+  .card-excerpt {
+    color: var(--gray);
+    margin-bottom: 20px;
+    flex-grow: 1;
+  }
+  
+  .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 15px;
+  }
+  
+  .author {
+    display: flex;
+    align-items: center;
+  }
+  
+  .author-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+    border: 2px solid var(--primary);
+  }
+  
+  .author-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  
+  .read-more {
+    display: inline-flex;
+    align-items: center;
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: var(--transition);
+    text-decoration: none;
+  }
+  
+  .read-more i {
+    margin-left: 5px;
+    transition: var(--transition);
+  }
+  
+  .read-more:hover {
+    color: var(--secondary);
+  }
+  
+  .read-more:hover i {
+    transform: translateX(5px);
+  }
+  
+  .featured-badge {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: var(--success);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .view-all-container {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .view-all-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: linear-gradient(90deg, var(--primary), #4f46e5);
+    color: white;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition);
+    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
+  }
+  
+  .view-all-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+  }
+  
+  @media (max-width: 768px) {
+    .blog-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .section-title {
+      font-size: 2rem;
+    }
+    
+    .section-subtitle {
+      font-size: 1rem;
+    }
+  }
+    </style>
+    <style>
+    .threed{
+        display: flex;
+        width: 95%;
+        margin: auto;
+        /*border: 1px solid red;*/
+        align-items: center;
+        justify-content: space-between;
+    }
+         .box {
+    width: 200px;
+    height: 260px;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .box:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
+    z-index: 1;
+  }
+  
+  .box:hover {
+    transform: translateY(-15px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .box:active {
+    transform: translateY(-5px) scale(0.95);
+  }
+  
+  .icon {
+    margin-bottom: 15px;
+    z-index: 2;
+    transition: transform 0.3s ease;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .icon img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  .box:hover .icon {
+    transform: scale(1.2);
+  }
+  
+  .label {
+    color: #333;
+    font-weight: 600;
+    font-size: 18px;
+    z-index: 2;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .description {
+    color: #666;
+    font-size: 14px;
+    text-align: center;
+    padding: 0 15px;
+    margin-top: 8px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    z-index: 2;
+  }
+  
+  .box:hover .label {
+    color: #4a6cf7;
+  }
+  
+  .box:hover .description {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .box-1 { background-color: #fff9f0; }
+  .box-2 { background-color: #f0f8ff; }
+  .box-3 { background-color: #f5fff0; }
+  .box-4 { background-color: #fff0f5; }
+  
+  .box-1 .label { color: #ff9800; }
+  .box-2 .label { color: #2196f3; }
+  .box-3 .label { color: #4caf50; }
+  .box-4 .label { color: #e91e63; }
+  
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .box {
+      width: 80%;
+      max-width: 300px;
+    }
+  }
+  
+  h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .title-container {
+    text-align: center;
+    margin-bottom: 30px;
+    width: 100%;
+  }
+  
+  .subtitle {
+    /*color: #666;*/
+    font-size: 1.2rem;
+    margin-top: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .subtitles{
+      color: gray;
+    font-size: 0.6rem;
+    margin-top: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+    </style>
+    <style>
+         #cardcontainer{
+            display: flex;
+            text-align: center;
+        }
+        .counter {
+            font-size: 1.5rem;
+            margin: 2px 0;
+            font-weight: bold;
+            color: #faea0c;
+            display: flex;
+            flex-direction: column;
+        }
+        .counter span{
+            margin:auto;
+        }
+        .counter p,a{
+            font-size:0.8rem;
+            color:white;
+            text-decoration: none;
+        }
+        .text-block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /*width: 30%;*/
+            /*height: 300px;*/
+            position: absolute;
+            /*background-color: black;*/
+            color: white;
+            padding-left: 20px;
+            padding-right: 20px;
+            bottom: 10px;
+            right: 10px;
+            /*border: 1px solid #faea0c;*/
+            
+        }
+        .text-block a{
+            background-color:#faea0c;
+            color: black;
+            padding: 5px;
+        }
+        #aboutus_12{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px auto;
+        }
+        #aboutus_12 li::marker {
+            color: #faea0c;
+        }
+</style>
+    <style>
+        /* body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #f0f0f0;
+    } */
+    .carousel-container {
+      width: 98%;
+      /* max-width: 1300px; */
+      margin: auto;
+      overflow: hidden;
+      /* border: 2px solid #ccc; */
+      /* border-radius: 10px; */
+      background: #fff;
+      /* padding: 5px 0px; */
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+    .carousel-trackx {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .carousel-image {
+      flex: 0 0 auto;
+      width: 16.66%; /* 100 / 6 = 16.66% */
+      height: 300px;
+      object-fit: cover;
+      padding: 0px 5px;
+    }
+    .carousel-image img {
+      /* padding: 10px; */
+      width: 100%;
+      height: 70%;
+      /* border: 1px solid black; */
+      /* border-radius: 10px; */
+    }
+    .carousel-image button {
+      width: 100%;
+      height: 12%;
+      background-color:#ccc;
+      opacity: 0.9s;
+      color:navy;
+      border: none;
+      cursor: pointer;
+      /* border-radius: 15px; */
+    }
+    .carousel-image button:hover {
+      background-color: gold;
+      color: navy;
+    }
+    .carousel-image button h4 {
+      text-align: center;
+      font-size: medium;
+      margin: 5px 0;
+      font-weight: bold;
+    }
+    /* .............................................. */
+    .carousel-imagex {
+      flex: 0 0 auto;
+      width: 16.66%; /* 100 / 6 = 16.66% */
+      height: 300px;
+      object-fit: cover;
+      padding: 0px 5px;
+    }
+    .carousel-imagex img {
+      /* padding: 10px; */
+      width: 100%;
+      height: 70%;
+      /* border: 1px solid black; */
+      /* border-radius: 10px; */
+    }
+    .carousel-imagex button {
+      width: 100%;
+      height: 12%;
+      background-color:#ccc;
+      opacity: 0.9s;
+      color:navy;
+      border: none;
+      cursor: pointer;
+      /* border-radius: 15px; */
+    }
+    .carousel-imagex button:hover {
+      background-color: gold;
+      color: navy;
+    }
+    .carousel-imagex button h4 {
+      text-align: center;
+      font-size: medium;
+      margin: 5px 0;
+      font-weight: bold;
+    }
+
+    @media (max-width: 1024px) {
+      .carousel-image {
+        width: 25%; /* 4 images visible */
+      }
+    }
+
+    @media (max-width: 768px) {
+      .carousel-image {
+        width: 33.33%; /* 3 images visible */
+      }
+    }
+
+    @media (max-width: 480px) {
+      .carousel-image {
+        width: 50%; /* 2 images visible */
+      }
+    }
+    @media (max-width: 1024px) {
+      .carousel-imagex {
+        width: 25%; /* 4 images visible */
+      }
+    }
+
+    @media (max-width: 768px) {
+      .carousel-imagex {
+        width: 33.33%; /* 3 images visible */
+      }
+    }
+
+    @media (max-width: 480px) {
+      .carousel-imagex {
+        width: 50%; /* 2 images visible */
+      }
+    }
+    </style>
+</head>
+<body class="container-fluid">
+
+         <!-- menubar -->
+     <nav class="navbar navbar-expand-lg navbar-light bg-light p-0" style="z-index: 1000; position:sticky; top: 0;">
+      <div class="container-fluid" style="background-color: white; width:100%;">
+        
+        <div class="logo_cont" style="width:30%; margin:0px;">
+          <img src="./logo/SK.png">
+          
+          <!-- <a class="navbar-brand"  href="#">SK Holidays Travel Travels</a> -->
+        </div>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="menu_bar collapse navbar-collapse" style="width:40%;" id="navbarTogglerDemo">
+          <ul class="nav justify-content-end">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="./index.html">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">GROUP TOUR</a>
+            </li>
+            <li class="nav-item">
+              <div class="dropdown">
+                <a class="nav-link btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">TOURS</a>
+                <div class="dropdown-menu">
+                    <ul>
+                        <li><a href="#international">International</a></li>
+                        <li><a href="#domestic">Domestic</a></li>
+                    </ul>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Spiritual/Spiritual.html">SPIRITUAL TOUR</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Honeymoon/Honeymoon.html">HONEYMOON</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">CRUISE</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">CONTACT</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#" style="text-decoration:none; color:Navy; margin:auto;">Agent Login</a></li>
+          </ul>
+        </div>
+        
+        
+
+
+      </div>
+    </nav>
+    
+
+    <!-- carousel123 -->
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" style="width:100%;">
+      <div class="carousel-inner">
+          
+          
+           <div class="carousel-item active">
+          <img src="./title_card/1.png" alt="explore" style="width:100%;" />
+        </div>
+        <div class="carousel-item">
+           <img src="./title_card/2.png" alt="explore" style="width:100%;" />
+</div>
+        <div class="carousel-item">
+            <img src="./title_card/3.png" alt="explore" style="width:100%;" />
+</div>
+ <div class="carousel-item">
+            <img src="./title_card/4.png" alt="explore" style="width:100%;" />
+</div>
+ <div class="carousel-item">
+            <img src="./title_card/5.png" alt="explore" style="width:100%;" />
+</div>
+
+        </div>
+      </div>
+
+
+ <!--- #ABOUT-->
+
+        <div class="row" style="width:90%;" id="aboutus_12">
+          <div class="col-6">
+            <h4 style="font-size:larger; font-weight:800; " class="subtitle">About Us</h4>
+            <h5>Explore all tour of the world with us.</h5>
+            <p>Experience the joy of travel with <b>SK Holidays Travel </b>, where every journey is thoughtfully crafted. With personalized itineraries and warm hospitality, we make your trips seamless and memorable.<br><br> Discover the hidden beauty beyond with us.</p>
+            <ul>
+              <li>
+                <div>
+                  <h6>Tour guide</h6>
+                  <p>
+                    <!--Lorem Ipsum available, but the majority have suffered alteration in some.-->
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h6>Friendly Price</h6>
+                  <p>
+                    <!--Lorem Ipsum available, but the majority have suffered alteration in some.-->
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h6>Reliable Tours</h6>
+                  <p>
+                    <!--Lorem Ipsum available, but the majority have suffered alteration in some.-->
+                  </p>
+                </div>
+              </li>
+            </ul>
+            <a href="#" class="btn" style="background-color:#faea0c;">Booking Now</a>
+          </div>
+          <div class="col-6 ">
+          <figure class="about-banner ">
+            <img src="Family.png" loading="lazy" alt="" class="w-100">
+          </figure></div>
+        </div>
+
+
+
+<h2 style="text-align:center; margin: 50px auto; width:100%;" class="international section-title">International Packages</h2>
+<div class="carousel-container" style="width:90%;">
+  <div class="carousel-track" id="carouselTrackx">
+    <!-- Add as many images as needed -->
+    <div class="carousel-imagex">
+    <img src="./International-Packages/Australia.png"/>
+    <a href="./SK_Amritsar/Amritsar.html">
+    <button>
+      <h4>Australia</h4>
+    </button></a>
+    </div>
+    <div class="carousel-imagex" >
+      <img src="./International-Packages/2.png" />
+      <a href="./SK_Amritsar/Amritsar.html">
+      <button>
+        <h4>Azerbaijan</h4>
+      </button></a>
+      </div>
+    <div class="carousel-imagex" >
+        <img src="./International-Packages/3.png" />
+        <a href="./SK_Amritsar/Amritsar.html">
+        <button>
+          <h4>Bali</h4>
+        </button></a>
+        </div>
+    <div class="carousel-imagex" >
+          <img src="./International-Packages/4.png" />
+          <a href="./SK_Amritsar/Amritsar.html">
+          <button>
+            <h4>Dubai</h4>
+          </button></a>
+          </div>
+    <div class="carousel-imagex" >
+            <img src="./International-Packages/5.png" />
+            <a href="./SK_Amritsar/Amritsar.html">
+            <button>
+              <h4>Dubai & Abudabi</h4>
+            </button></a>
+            </div>
+    <div class="carousel-imagex" >
+              <img src="./International-Packages/6.png" />
+              <a href="./SK_Amritsar/Amritsar.html">
+              <button>
+                <h4>Europe</h4>
+              </button></a>
+              </div>
+    <div class="carousel-imagex" >
+                <img src="./International-Packages/7.png" />
+                <a href="./SK_Amritsar/Amritsar.html">
+                <button>
+                  <h4>Hong Kong</h4>
+                </button></a>
+                </div>
+    <div class="carousel-imagex" >
+                  <img src="./International-Packages/8.png" />
+                  <a href="./SK_Amritsar/Amritsar.html">
+                  <button>
+                    <h4>Kazakhastan</h4>
+                  </button></a>
+                  </div>
+    <div class="carousel-imagex" >
+                  <img src="./International-Packages/9.png" />
+                  <a href="./SK_Amritsar/Amritsar.html">
+                  <button>
+                    <h4>Kazakhastan & Uzbekistan</h4>
+                  </button></a>
+                  </div>
+    <div class="carousel-imagex" >
+                  <img src="./International-Packages/10.png" />
+                  <a href="./SK_Amritsar/Amritsar.html">
+                  <button>
+                    <h4>Maldives</h4>
+                  </button></a>
+                  </div>
+    <div class="carousel-imagex" >
+                  <img src="./International-Packages/11.png" />
+                  <a href="./SK_Amritsar/Amritsar.html">
+                  <button>
+                    <h4>Malaysia</h4>
+                  </button></a>
+                  </div>
+    <div class="carousel-imagex" >
+                  <img src="./International-Packages/12.png" />
+                  <a href="./SK_Amritsar/Amritsar.html">
+                  <button>
+                    <h4>Mauritius</h4>
+                  </button></a>
+                  </div>
+    <div class="carousel-imagex" >
+                  <img src="./International-Packages/13.png" />
+                  <a href="./SK_Amritsar/Amritsar.html">
+                  <button>
+                    <h4>Phillipines</h4>
+                  </button></a>
+                  </div>
+    <div class="carousel-imagex" >
+                  <img src="./International-Packages/14.png" />
+                  <a href="./SK_Amritsar/Amritsar.html">
+                  <button>
+                    <h4>Singapore</h4>
+                  </button></a>
+                  </div>
+    <div class="carousel-imagex" >
+                  <img src="./International-Packages/15.png" />
+                  <a href="./SK_Amritsar/Amritsar.html">
+                  <button>
+                    <h4>Singapore & Malaysia</h4>
+                  </button></a>
+                  </div>
+    <div class="carousel-imagex" >
+                  <img src="./International-Packages/16.png" />
+                  <a href="./SK_Amritsar/Amritsar.html">
+                  <button>
+                    <h4>Srilanka</h4>
+                  </button></a>
+                  </div>
+    <div class="carousel-imagex" >
+                  <img src="./International-Packages/17.png" />
+                  <a href="./SK_Amritsar/Amritsar.html">
+                  <button>
+                    <h4>Thailand</h4>
+                  </button></a>
+                  </div>
+    <div class="carousel-imagex" >
+                  <img src="./International-Packages/18.png" />
+                  <a href="./SK_Amritsar/Amritsar.html">
+                  <button>
+                    <h4>Vietnam</h4>
+                  </button></a>
+                  </div>
+    <div class="carousel-imagex" >
+                  <img src="./International-Packages/19.png" />
+                  <a href="./SK_Amritsar/Amritsar.html">
+                  <button>
+                    <h4>Vietnam & Combodia</h4>
+                  </button></a>
+                  </div>
+    <div class="carousel-imagex" >
+                  <img src="./International-Packages/20.png" />
+                  <a href="./SK_Amritsar/Amritsar.html">
+                  <button>
+                    <h4>United States</h4>
+                  </button></a>
+                  </div>
+    <div class="carousel-imagex" >
+                  <img src="./International-Packages/21.png" />
+                  <a href="./SK_Amritsar/Amritsar.html">
+                  <button>
+                    <h4>London</h4>
+                  </button></a>
+                  </div>
+    <div class="carousel-imagex" >
+                  <img src="./International-Packages/22.png" />
+                  <a href="./SK_Amritsar/Amritsar.html">
+                  <button>
+                    <h4>Canada</h4>
+                  </button></a>
+                  </div>
+    <div class="carousel-imagex" >
+                  <img src="./International-Packages/23.png" />
+                  <a href="./SK_Amritsar/Amritsar.html">
+                  <button>
+                    <h4>Russia</h4>
+                  </button></a>
+                  </div>
+                  </div>
+</div>
+<div class="col-12 p-5" id="worldmap" style=" height: 350px; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center; font-weight: 800; font-size:50px;">Your Journey<p style="color: #faea0c;">Your Independence</p></div>
+  <!-- carouselindia -->
+ 
+<h2 style="text-align:center; margin: 50px auto; width:100%;" class="section-title domestic">National Packages</h2>
+
+<div class="carousel-container" style="width: 90%;">
+  <div class="carousel-track" id="carouselTrack">
+    <!-- Add as many images as needed -->
+    <div class="carousel-image" >
+    <img src="image_45/Amritsar.jpg" />
+    <a href="./SK_Amritsar/connectamristar.html">
+    <button>
+      <h4>Amristar</h4>
+    </button></a>
+    </div>
+    <div class="carousel-image" >
+      <img src="image_45/Andaman_and_Nicobar_Islands.jpg" />
+      <a href="./SK_Andaman/connectandaman.html">
+      <button>
+        <h4>Andaman</h4>
+      </button></a>
+      </div>
+    <div class="carousel-image" >
+        <img src="image_45/Goa.jpg" />
+        <a href="./SK_Goa/connectGoa.html">
+        <button>
+          <h4>Goa</h4>
+        </button></a>
+        </div>
+    <div class="carousel-image" >
+          <img src="image_45/Kerala.jpg" />
+          <a href="./SK_Kerala/connectkerala.html">
+          <button>
+            <h4>Kerala</h4>
+          </button></a>
+          </div>
+    <div class="carousel-image" >
+            <img src="image_45/Kolkata.jpg" />
+            <a href="./SK_Kolkata/connectKolkata.html">
+            <button>
+              <h4>Kolkata</h4>
+            </button></a>
+            </div>
+    <div class="carousel-image" >
+              <img src="image_45/coorg.jpg" />
+              <a href="./SK_coorg/connectcoorg.html">
+              <button>
+                <h4>Coorg</h4>
+              </button></a>
+              </div>
+    <div class="carousel-image" >
+                <img src="image_45/Kashmir.jpg" />
+                <a href="./SK_Jammu/connectDelhi.html">
+                <button>
+                  <h4>Jammu & Kashmir</h4>
+                </button></a>
+                </div>
+    <div class="carousel-image" >
+                  <img src="image_45/Darjeeling.jpg" />
+                  <a href="./SK_Darjeeling/connectDarjeeling.html">
+                  <button>
+                    <h4>Darjeeling & Sikkim</h4>
+                  </button></a>
+                  </div>
+    <div class="carousel-image" >
+                    <img src="image_45/Gulmarg.jpg" />
+                    <a href="./SK_Gulmarg/connectGulmarg.html">
+                    <button>
+                      <h4>Gulmarg</h4>
+                    </button></a>
+                    </div>
+    <div class="carousel-image" >
+                      <img src="image_45/Jaipur.jpg" />
+                      <a href="./SK_Jaipur/connectJaipur.html">
+                      <button>
+                        <h4>Jaipur</h4>
+                      </button></a>
+                      </div>
+    <div class="carousel-image" >
+                        <img src="image_45/Jaisalmer.jpg" />
+                        <a href="./SK_Jaisalmer/connectJaislmer.html">
+                        <button>
+                          <h4>Jaisalmer</h4>
+                        </button></a>
+                        </div>
+    <div class="carousel-image" >
+                          <img src="image_45/Mahabaleshwar.jpg" />
+                          <a href="./Sk_Lakshadweep/connectLakshadweep.html">
+                          <button>
+                            <h4>Mahabaleshwar</h4>
+                          </button></a>
+                          </div>
+    <div class="carousel-image" >
+                            <img src="image_45/Leh_Ladakh.jpg" />
+                            <a href="./SK_Leh Ladakh/connectLehLadakh.html">
+                            <button>
+                              <h4>Leh Ladakh & Ladakh</h4>
+                            </button></a>
+                            </div>
+    <div class="carousel-image" >
+                              <img src="image_45/Rajasthan.jpg" />
+                              <a href="./SK_Rajasthan/connectRajasthan.html">
+                              <button>
+                                <h4>Rajasthan</h4>
+                              </button></a>
+                              </div>
+    <div class="carousel-image" >
+                                <img src="image_45/Mussorie.jpg" />
+                                <a href="SK_Golden Triangle/connectGolden triangle.html">
+                                <button>
+                                  <h4>Golden Triangle</h4>
+                                </button></a>
+                                </div>
+    <div class="carousel-image" >
+                                  <img src="image_45/Mumbai.jpg" />
+                                  <a href="SK_7 Sister/connect7Sister.html">
+                                  <button>
+                                    <h4>7 Sisters</h4>
+                                  </button></a>
+                                  </div>
+    <div class="carousel-image" >
+                                    <img src="image_45/Lakshadweep.jpg" />
+                                    <a href="./Sk_Lakshadweep/connectLakshadweep.html">
+                                    <button>
+                                      <h4>Lakshadweep</h4>
+                                    </button></a>
+                                    </div>
+    <div class="carousel-image" >
+                                      <img src="image_45/Delhi.jpg" />
+                                      <a href="./SK_Delhi/connectDelhi.html">
+                                      <button>
+                                        <h4>Delhi & Agra</h4>
+                                      </button></a>
+                                      </div>
+      
+  </div>
+</div>
+
+  <!-- <div class="carousel-buttons-news">
+      <button class="carousel-button-new" id="prevs" disabled><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+        <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"/>
+      </svg></button>
+      <button class="carousel-button-new" id="nexts"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+        <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+      </svg></button>
+  </div>
+</div>
+<div style="height: 90px;"></div> -->
+
+ <!-- carousel -->
+  
+  <!-- <div class="container pt-3"><h3>Top Chosen In TamilNadu</h3>
+    <p>Pick a weekend vibe and explore</p></div> -->
+
+<div style="height: 30px;"></div>
+<!-- demo -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="title-container">
+      <h2>POPULAR EXPERIENCES</h2>
+      <p class="subtitle">PICK YOUR CHOICES</p>
+    </div>
+    
+    <div class="container threed">
+      <div class="box box-1">
+        <div class="icon">
+          <img src="Icons/adventure1.png" alt="Adventure">
+        </div>
+        <div class="label">ADVENTURE</div>
+        <div class="description">Exciting outdoor activities and thrilling experiences</div>
+      </div>
+      
+      <div class="box box-2">
+        <div class="icon">
+          <img src="Icons/beach1.png" alt="Beach">
+        </div>
+        <div class="label">BEACH</div>
+        <div class="description">Relaxing coastal getaways and seaside activities</div>
+      </div>
+      
+      <div class="box box-3">
+        <div class="icon">
+          <img src="Icons/camp1.png" alt="Camping">
+        </div>
+        <div class="label">CAMPING</div>
+        <div class="description">Outdoor stays and nature exploration experiences</div>
+      </div>
+      
+      <div class="box box-4">
+        <div class="icon">
+          <img src="Icons/travel1.png" alt="Friendly">
+        </div>
+        <div class="label">FRIENDLY</div>
+        <div class="description">Comfortable and welcoming experiences for everyone</div>
+      </div>
+      
+      <div class="box box-1">
+        <div class="icon">
+          <img src="Icons/honeymoon.png" alt="Honeymoon">
+        </div>
+        <div class="label">HONEYMOON</div>
+        <div class="description">Romantic getaways for couples and newlyweds</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="height: 30px;"></div>
+
+
+<div class="container-fluid" style="background-color:#faea0c; color:black; display:flex; justify-content:center; align-items:center; padding:10px; margin:50px auto;">
+        <p class="subtitle" style="text-align:center;">Discover tailor-made journeys with SK Holidays Travel, designed around your unique desires.<br><b> Book your unforgettable experience today!</b></p>
+        <div id="abouts" class="container" style="margin: auto; margin-top: 60px;">
+  <h5 style="font-weight:800;" class="subtitle">Why Us</h5>
+  <p class="subtitle">At SK Holidays Travel, we turn your travel dreams into reality with seamless planning, unbeatable deals, and personalized service. Whether you seek adventure, luxury, or cultural experiences, our expertly curated itineraries ensure a hassle-free and memorable journey. </p>
+  <ul>
+      <li>Complete Travel Management – Flights, hotels, and guided tours organized for you</li>
+      <li>24/7 Customer Support – We're here any time you need us</li>
+      <li>Expert Knowledge of Global Destinations – Insider tips for unforgettable experiences</li>
+      <li>Tailor-Made Itineraries – Personalized to your style, interests, and budget</li>
+      <li>Stress-Free Travel Planning – You relax, we handle the rest</li>
+      <li>Unforgettable Travel Experiences – Creating memories that last a lifetime</li>
+      <li>Trusted Travel Partner – Reliable and customer-focused service</li>
+    </ul>
+</div>
+    </div>
+<!-- imagegallery -->
+ <div class=" container-fluid imagegallery" style="box-sizing: border-box; padding: 20px;">
+<h5>Best Selling</h5>
+<a>"Exclusive destinations, unbeatable deals – discover the world with SK Holidays Travel!"</a>
+<div id="myBtnContainer">
+  <!-- <button class="btn active" onclick="filterSelection('all')"> Show all</button> -->
+  <button class="btn active" onclick="filterSelection('nature')"> International</button>
+  <button class="btn" onclick="filterSelection('cars')"> Domestic</button>
+  <!-- <button class="btn" onclick="filterSelection('people')"> Group Tours</button> -->
+</div>
+
+<!-- Portfolio Gallery Grid -->
+<div class="row natural">
+  <div class="column nature">
+    <div class="content">
+      <img src="Bestselling/azebaijan.jpg" alt="Mountains" style="width:100%">
+      <h4>Azebaijan</h4>
+      <!-- <p>Lorem ipsum dolor..</p> -->
+    </div>
+  </div>
+  <div class="column nature">
+    <div class="content">
+      <img src="Bestselling/Bali.jpg" alt="Lights" style="width:100%">
+      <h4>Bali</h4>
+      <!-- <p>Lorem ipsum dolor..</p> -->
+    </div>
+  </div>
+  <div class="column nature">
+    <div class="content">
+      <img src="Bestselling/dubai.jpg" alt="Nature" style="width:100%">
+      <h4>Dubai</h4>
+      <!-- <p>Lorem ipsum dolor..</p> -->
+    </div>
+  </div>
+  <div class="column nature">
+    <div class="content">
+      <img src="Bestselling/hongkong.jpg" alt="Nature" style="width:100%">
+      <h4>Hongkong</h4>
+      <!-- <p>Lorem ipsum dolor..</p> -->
+    </div>
+  </div>
+  <div class="column nature">
+    <div class="content">
+      <img src="Bestselling/singapore.png" alt="Nature" style="width:100%">
+      <h4>Singapore</h4>
+      <!-- <p>Lorem ipsum dolor..</p> -->
+    </div>
+  </div>
+  <div class="column nature">
+    <div class="content">
+      <img src="Bestselling/MALAYSIA.jpg" alt="Nature" style="width:100%">
+      <h4>Malaysia</h4>
+      <!-- <p>Lorem ipsum dolor..</p> -->
+    </div>
+  </div>
+  <div class="column nature">
+    <div class="content">
+      <img src="Bestselling/vietnam.JPG" alt="Nature" style="width:100%">
+      <h4>Vietnam</h4>
+      <!-- <p>Lorem ipsum dolor..</p> -->
+    </div>
+  </div>
+  <div class="column nature">
+    <div class="content">
+      <img src="Bestselling/maldives.jpg" alt="Nature" style="width:100%">
+      <h4>Maldives</h4>
+      <!-- <p>Lorem ipsum dolor..</p> -->
+    </div>
+  </div>
+  <div class="column nature">
+    <div class="content">
+      <img src="Bestselling/Srilanka.jpg" alt="Nature" style="width:100%">
+      <h4>Srilanka</h4>
+      <!-- <p>Lorem ipsum dolor..</p> -->
+    </div>
+  </div>
+  <div class="column nature">
+    <div class="content">
+      <img src="Bestselling/Thailand.jpg" alt="Nature" style="width:100%">
+      <h4>Thailand</h4>
+      <!-- <p>Lorem ipsum dolor..</p> -->
+    </div>
+  </div>
+  <div class="column nature">
+    <div class="content">
+      <img src="Bestselling/nepal.jpg" alt="Nature" style="width:100%">
+      <h4>Nepal</h4>
+      <!-- <p>Lorem ipsum dolor..</p> -->
+    </div>
+  </div>
+
+
+  <div class="column cars"><a href="../SK_Andaman/index.html">
+    <div class="content d-flex flex-column">
+      <img src="Bestselling/Demestic/Andaman.jpg" alt="Car" style="width:100%">
+      <div style="display:flex; justify-content: space-between; margin-top:5px;"><h4>Andaman</h4>
+      </div>
+    </div></a>
+  </div>
+  <div class="column cars">
+    <div class="content d-flex flex-column">
+      <img src="Bestselling/Demestic/Darjeeling.jpg" alt="Car" style="width:100%">
+      <div style="display:flex; justify-content: space-between; margin-top:5px;"><h4>Golden Triangle</h4>
+        </div>
+    </div>
+    </div>
+  <div class="column cars">
+    <div class="content d-flex flex-column">
+      <img src="Bestselling/Demestic/goa.jpg" alt="Car" style="width:100%">
+      <div style="display:flex; justify-content: space-between; margin-top:5px;"><h4>Goa</h4>
+        </div>
+    </div>
+  </div>
+  <div class="column cars">
+    <div class="content d-flex flex-column">
+      <img src="Bestselling/Demestic/kashmir.jpg" alt="Car" style="width:100%">
+      <div style="display:flex; justify-content: space-between; margin-top:5px;"><h4>Kashmir</h4>
+        </div>
+    </div>
+  </div>
+  <div class="column cars">
+    <div class="content d-flex flex-column">
+      <img src="Bestselling/Demestic/kerala.jpeg" alt="Car" style="width:100%">
+      <div style="display:flex; justify-content: space-between; margin-top:5px;"><h4>Kerala</h4>
+        </div>
+    </div>
+  </div>
+  <div class="column cars">
+    <div class="content d-flex flex-column">
+      <img src="Bestselling/Demestic/shimla&manali.jpg" alt="Car" style="width:100%" />
+      <div style="display:flex; justify-content: space-between; margin-top:5px;"><h4>Shimla & Manali</h4>
+        </div>
+    </div>
+  </div>
+  <div class="column cars">
+    <div class="content d-flex flex-column">
+      <img src="Bestselling/Demestic/sikkim.jpg" alt="Car" style="width:100%">
+      <div style="display:flex; justify-content: space-between; margin-top:5px;"><h4>Darjeeling</h4>
+        </div>
+    </div>
+  </div>
+
+  <!-- <div class="column people">
+    <div class="content">
+      <img src="Images/Kutralam1.jpg" alt="People" style="width:100%">
+      <h4>Girl</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column people">
+    <div class="content">
+      <img src="Images/mahabalipuram1.jpg" alt="People" style="width:100%">
+      <h4>Man</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column people">
+    <div class="content">
+      <img src="Images/munnar1.jpg" alt="People" style="width:100%">
+      <h4>Woman</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div> -->
+<!-- END GRID -->
+</div>
+</div>
+
+
+
+<!-- explore -->
+<!-- <div class="container-fluid pt-5" id="Blogs_one">-->
+<!--<h5>Our Timeless destinations - Blogs</h5>-->
+<!--<p>"Luxury, adventure, culture – whatever you seek, we craft it flawlessly!"</p>-->
+<!--</div>-->
+<div class="container-fluid d-flex servicess" >
+  <section class="blog-section">
+  <div class="section-header">
+    <h2 class="section-title">Travel Inspiration</h2>
+    <p class="section-subtitle">Discover travel tips, destination guides, and holiday inspiration to plan your perfect getaway</p>
+  </div>
+  
+  <div class="blog-grid">
+    <!-- Blog Card 1 -->
+    <article class="blog-card">
+      <div class="card-image-container">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Tropical Beach Paradise" class="card-image">
+        <span class="card-category">Beaches</span>
+        <span class="featured-badge"><i class="fas fa-star"></i> Featured</span>
+      </div>
+      <div class="card-content">
+        <div class="card-date">
+          <i class="far fa-calendar-alt"></i> June 15, 2023
+        </div>
+        <h3 class="card-title">Top 10 Tropical Beaches You Must Visit This Summer</h3>
+        <p class="card-excerpt">Discover pristine white sands, crystal-clear waters, and the most breathtaking coastal views that will make your summer holiday unforgettable.</p>
+        <div class="card-footer">
+          <div class="author">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Author" class="author-image">
+            <span class="author-name">Sarah Johnson</span>
+          </div>
+          <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </article>
+    
+    <!-- Blog Card 2 -->
+    <article class="blog-card">
+      <div class="card-image-container">
+        <img src="https://images.unsplash.com/photo-1519677100203-a0e668c92439" alt="European Adventure" class="card-image">
+        <span class="card-category">Europe</span>
+      </div>
+      <div class="card-content">
+        <div class="card-date">
+          <i class="far fa-calendar-alt"></i> May 28, 2023
+        </div>
+        <h3 class="card-title">The Ultimate European Road Trip Itinerary</h3>
+        <p class="card-excerpt">From the romantic streets of Paris to the historic ruins of Rome, plan your perfect European adventure with our comprehensive guide.</p>
+        <div class="card-footer">
+          <div class="author">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Author" class="author-image">
+            <span class="author-name">Michael Chen</span>
+          </div>
+          <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </article>
+    
+    <!-- Blog Card 3 -->
+    <article class="blog-card">
+      <div class="card-image-container">
+        <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1" alt="Mountain Retreat" class="card-image">
+        <span class="card-category">Mountains</span>
+      </div>
+      <div class="card-content">
+        <div class="card-date">
+          <i class="far fa-calendar-alt"></i> April 12, 2023
+        </div>
+        <h3 class="card-title">5 Breathtaking Mountain Retreats for a Peaceful Getaway</h3>
+        <p class="card-excerpt">Escape the hustle and bustle of city life with these serene mountain destinations offering stunning views and rejuvenating experiences.</p>
+        <div class="card-footer">
+          <div class="author">
+            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Author" class="author-image">
+            <span class="author-name">Emma Wilson</span>
+          </div>
+          <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </article>
+  </div>
+  
+  <!--<div class="view-all-container">-->
+  <!--  <a href="#" class="view-all-btn">View All Articles</a>-->
+  <!--</div>-->
+</section>
+</div>
+<div style="height: 50px;"></div>
+
+<!-- carousel1 -->
+<div class="container-fluid"><h5>Upcoming Packages</h5><p> Discover the world, stress-free and in style!"</p>
+  <div class="container-fluid d-flex servicess" >
+    <div class="row explore">
+      <p>Coming Soon!...</p>
+    <!--<div class="col-3 explore-col image-container"><img src="Goa.png" alt="" class="image">-->
+    <!--</div>-->
+    <!--  <div class="col-6 explore-col image-container"><img src="Srilanka.png" alt="" class="image">-->
+    <!--  </div>-->
+    <!--  <div class="col-3 explore-col image-container"><img src="Manali.png" alt="" class="image">-->
+    <!--  </div>-->
+      <!-- <div class="col-4"><img src="" alt=""></div> -->
+    </div>
+  </div>
+</div>
+<!-- carousel2 -->
+ 
+<!-- offers -->
+<div class="container-fluid pt-5"><h5>For You</h5><p>Promotions, Deals and Special Offers</p></div>
+<div class="card container-fluid d-flex" style="width: 90%;">
+  <div class="card-header">Get off on your first booking</div>
+  <div class="card-body justify-content-center align-items-center d-flex flex-column">
+    <div class="card-image">
+    <!--<img src="card/Finland.jpg" loading="eager" alt="offer1">-->
+    <!--<img src="card/Vietnam.jpg" loading="eager" alt="offer1">-->
+    <!--<img src="card/Singapore.jpg" loading="eager" alt="offer1">-->
+    <!--<img src="card/Malaysia.jpg" loading="eager" alt="offer1">-->
+    <!--<img src="card/Netherlands.jpg" loading="eager" alt="offer1">-->
+  </div>
+    <div style="margin: 7px 0; border: 1px solid gold; width: 100%;"></div>
+    <h5 class="card-title">Save and Stay</h5>
+    <p class="card-text">Start your plan with a sense of adventure, with saving 10%.</p>
+    <a href="#" class="btn btn-primary">Loyal</a>
+  </div>
+</div>
+<!-- offers -->
+<div class="container-fluid pt-5"><h3>Trending</h3><p>Promotions, Deals and Special Offers</p></div>
+<table class="container-fluid table table-destinations">
+  <tbody>
+      <tr>
+      <th scope="row">International</th>
+      <td>
+        <div>
+        <a href="#">Australia</a> <a href="#">Azerbaijan</a> <a href="#">Bali</a> <a href="#">Dubai</a> <a href="#">Dubai & Abudabi</a> <a href="#">Europe</a> <a href="#">Hong Kong</a> <a href="#">Kazakasthan</a> <a href="#">Kazakasthan & Uzebekisthan</a> <a href="#">Maldives</a> <a href="#">Malaysia</a> <a href="#">Mauritius</a> <a href="#">Phillipines</a> <a href="#">Singapore</a> <a href="#">Singapore & Malaysia</a> <a href="#">Thailand</a> <a href="#">Srilanka</a> <a href="#">Vietnam</a> <a href="#">Vietnam & Combodia</a> <a href="#">United States</a> <a href="#">London</a> <a href="#">Canada</a> <a href="#">Russia</a> </div>
+      </td>
+      <!-- <th scope="col">Last</th>
+      <th scope="col">Handle</th> -->
+    </tr>
+    <tr>
+      <th scope="row">Domestic</th>
+      <td>
+        <div>
+          <a href="#">Amristar</a> <a href="#">Andaman</a> <a href="#">Goa</a> <a href="#">Kerala</a> <a href="#">Kolkata</a> <a href="#">Coorg</a> <a href="#">Jammu & Kashmir</a> <a href="#">Darjeeling & Sikkim</a> <a href="#">Gulmarg</a> <a href="#">Jaipur</a> <a href="#">Jaisalmar </a><a href="#">Mahabaleshwar</a> <a href="#">Rajasthan</a> <a href="#">Golden Triangle</a> <a href="#">7 Sisters</a> <a href="#">Lakshadweep</a> <a href="#">Delhi & Agra</a> <a href="#">Leh Ladakh</a>
+        </div>
+      </td>
+      <!-- <td>Otto</td>
+      <td>@mdo</td> -->
+    </tr>
+    
+    <tr>
+      <th scope="row">Popular Destinations</th>
+      <td>
+        <div>
+        <a href="#">Baku</a> <a href="#">Tashkent</a> <a href="#">Almaty</a> <a href="#">Bishkek</a> <a href="#">Moscow</a> <a href="#">Istanbul</a> <a href="#">Yerevan</a> <a href="#">Tbilisi</a> <a href="#">Dushanbe</a> <a href="#">Belgrade</a> <a href="#">Minsk</a> <a href="#">Sofia</a> <a href="#">Tirana</a> <a href="#">Helsinki</a> <a href="#">Riga</a> <a href="#">Tallinn</a> <a href="#">Vilnius</a> <a href="#">Dubai</a> <a href="#">Bali</a> <a href="#">Paris</a> <a href="#">Madrid</a> <a href="#">Amsterdam</a> <a href="#">Lisbon</a> <a href="#">Zurich</a> <a href="#">Venice</a> <a href="#">Brussels</a> <a href="#">Bangkok</a> <a href="#">Phuket</a> <a href="#">Krabi</a> <a href="#">Kuala Lumpur</a></div>
+      </td>
+      <!-- <th scope="col">Last</th>
+      <th scope="col">Handle</th> -->
+    </tr>
+    
+  </tbody>
+</table>
+
+<!-- foot -->
+<div class="container-fluid d-flex address_bar" style="padding:20px 5px;">
+  <div class="container">
+    <div class="row" id="footer_area">
+     <div class="col-lg-4 service_sk">
+      <h3>Our Services:</h3>
+      <ul>
+        <li>Family Tour Packages</li>
+        <li>Group Tour Packages</li>
+        <li>Honeymoon Tour Packages</li>
+        <li>Spiritual Tour Packages</li>
+        <li>Cruise Tour Packages</li>
+      </ul></div>
+      <div class="col-lg-4">
+        <h3>Address:</h3>
+        <h5>SK Holidays Travel Pvt Ltd</h5>
+        <p>2nd Floor, Vallalar Complex,<br> Kamarajar Arch,<br> Perambalur - 621212</p>
+        <p>Call: +91 97505 26684</p>
+        <p>Email: skholidaystravelpvtltd@gmail.com</p>
+      </div>
+      <div class="col-lg-4">
+        <h3>Location</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3913.3205958370813!2d78.86391837573964!3d11.237809950512597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bab1bd608cb0a5d%3A0xd914d102120b8627!2sSK%20Holidays%20Travel%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1743346564179!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="col-lg-8 d-flex justify-content-left align-items-center" id="foot-logo">
+        <img src="logo/SK.png" alt="logo">
+        <!-- <h3>SK Holidays Travel Travel Pvt Ltd</h3> -->
+      </div>
+      <!-- <div class="col-4"></div> -->
+      <div class="col-lg-4 foot_icons">
+        <h3>Social Links</h3>
+      <a href=""><img src="Icons/facebook.png"></a>
+      <a href=""><img src="Icons/instagram.png"></a>
+      <a href=""><img src="Icons/whatsapp.png"></a>
+      <a href=""><img src="Icons/youtube.png"></a>
+      </div>
+      <!-- <div class="col-4">5</div> -->
+    </div>
+  </div>
+ </div>
+<!-- powered -->
+ <div class="container-fluid" style="display: flex; justify-content: center; padding: 0px 50px; background-color: gold; font-size: small;">
+  <p>Powered by Gurushasta Innotech</p>
+ </div>
+
+
+<!-- script -->
+<script async src="https://cse.google.com/cse.js?cx=755b59b36f6434b2a">
+  </script>
+   <script>
+    let next = document.querySelector('.next')
+let prev = document.querySelector('.prev')
+
+next.addEventListener('click', function(){
+let items = document.querySelectorAll('.items')
+document.querySelector('.slides').appendChild(items[0])
+})
+
+prev.addEventListener('click', function(){
+let items = document.querySelectorAll('.items')
+document.querySelector('.slides').prepend(items[items.length - 1]) // here the length of items = 6
+})
+  </script>
+<script>
+  const carousel = document.querySelector('.carousel-new');
+    const prevButton = document.getElementById('prev');
+    const nextButton = document.getElementById('next');
+    let currentIndex = 0;
+    const itemsToShow = getItemsToShow(); // Number of visible images
+
+    function getItemsToShow() {
+    if (window.innerWidth <= 600) {
+        return 6; // Show 3 items on small screens
+    } else if (window.innerWidth <= 900) {
+        return 4; // Show 4 items on medium screens
+    } else {
+        return 5; // Show 5 items on large screens
+    }
+}
+    function updateCarousel() {
+        carousel.style.transform = `translateX(-${currentIndex * (100 / itemsToShow)}%)`;
+        prevButton.disabled = currentIndex === 0;
+        nextButton.disabled = currentIndex === carousel.children.length - itemsToShow;
+    }
+
+    nextButton.addEventListener('click', () => {
+        if (currentIndex < carousel.children.length - itemsToShow) {
+            currentIndex++;
+            updateCarousel();
+        }
+    });
+
+    prevButton.addEventListener('click', () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateCarousel();
+        }
+    });
+    // Update carousel on window resize
+window.addEventListener('resize', updateCarousel);
+
+// Initial setup
+updateCarousel();
+</script>
+<script>
+  // international
+  const carousels = document.querySelector('.carousel-news');
+    const prevButtons = document.getElementById('prevs');
+    const nextButtons = document.getElementById('nexts');
+    let currentIndexws = 0;
+    const itemsToShowws = getItemsToShow(); // Number of visible images
+
+    function getItemsToShow() {
+    if (window.innerWidth <= 600) {
+        return 3; // Show 3 items on small screens
+    } else if (window.innerWidth <= 900) {
+        return 4; // Show 4 items on medium screens
+    } else {
+        return 5; // Show 5 items on large screens
+    }
+}
+    function updateCarousels() {
+        carousels.style.transform = `translateX(-${currentIndexws * (100 / itemsToShowws)}%)`;
+        prevButtons.disabled = currentIndexws === 0;
+        nextButtons.disabled = currentIndexws === carousels.children.length - itemsToShowws;
+    }
+
+    nextButtons.addEventListener('click', () => {
+        if (currentIndexws < carousels.children.length - itemsToShowws) {
+            currentIndexws++;
+            updateCarousels();
+        }
+    });
+
+    prevButtons.addEventListener('click', () => {
+        if (currentIndexws > 0) {
+            currentIndexws--;
+            updateCarousels();
+        }
+    });
+    // Update carousel on window resize
+   window.addEventListener('resize', updateCarousels);
+
+// Initial setup
+    updateCarousels();
+</script>
+<script>
+    const track = document.getElementById('carouselTrack');
+    const images = document.querySelectorAll('.carousel-image');
+    let position = 0;
+  
+    function scrollCarousel() {
+      const imageWidth = images[0].offsetWidth;
+      const visibleCount = Math.floor(track.offsetWidth / imageWidth);
+      const maxScroll = (images.length - visibleCount) * imageWidth;
+  
+      position += imageWidth;
+  
+      if (position > maxScroll) {
+        position = 0;
+      }
+  
+      track.style.transform = `translateX(-${position}px)`;
+    }
+  
+    // Recalculate position if window resizes
+    window.addEventListener("resize", () => {
+      position = 0;
+      track.style.transform = `translateX(0px)`;
+    });
+  
+    setInterval(scrollCarousel, 4500); // scroll every 3 seconds
+  </script>
+  <script>
+    const trackx = document.getElementById('carouselTrackx');
+    const imagesx = document.querySelectorAll('.carousel-imagex');
+    let positionx = 0;
+  
+    function scrollCarousel() {
+      const imageWidth = imagesx[0].offsetWidth;
+      const visibleCount = Math.floor(trackx.offsetWidth / imageWidth);
+      const maxScroll = (imagesx.length - visibleCount) * imageWidth;
+  
+      positionx += imageWidth;
+  
+      if (positionx > maxScroll) {
+        positionx = 0;
+      }
+  
+      trackx.style.transform = `translateX(-${positionx}px)`;
+    }
+  
+    // Recalculate position if window resizes
+    window.addEventListener("resize", () => {
+      positionx = 0;
+      trackx.style.transform = `translateX(0px)`;
+    });
+  
+    setInterval(scrollCarousel, 6500); // scroll every 3 seconds
+  </script>
+  <script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/service-worker.js')
+      .then(function(reg) {
+        console.log('✅ Service Worker Registered', reg);
+      })
+      .catch(function(err) {
+        console.log('❌ Service Worker registration failed:', err);
+      });
+  }
+</script>
+<script>
+  document.querySelectorAll('.box').forEach(box => {
+    box.addEventListener('click', function() {
+      this.classList.toggle('active');
+      
+            this.animate([
+        { transform: 'scale(1)' },
+        { transform: 'scale(1.03)' },
+        { transform: 'scale(1)' }
+      ], {
+        duration: 300,
+        iterations: 1
+      });
+    });
+  });
+</script>
+
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

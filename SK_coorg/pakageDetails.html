@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <style>
+      body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.package {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+.add-to-cart {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.add-to-cart:hover {
+    background-color: #0056b3;
+}
+
+#cart {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <body>
+    <h1>Travel Packages</h1>
+    <div class="package">
+        <h2>Beach Getaway</h2>
+        <p>Price: $500</p>
+        <button class="add-to-cart" data-name="Beach Getaway" data-price="500">Add to Cart</button>
+    </div>
+    <div class="package">
+        <h2>Mountain Adventure</h2>
+        <p>Price: $700</p>
+        <button class="add-to-cart" data-name="Mountain Adventure" data-price="700">Add to Cart</button>
+    </div>
+    <div class="package">
+        <h2>Cultural Tour</h2>
+        <p>Price: $300</p>
+        <button class="add-to-cart" data-name="Cultural Tour" data-price="300">Add to Cart</button>
+    </div>
+
+    <h2>Your Cart</h2>
+    <ul id="cart"></ul>
+    <p id="total">Total: $0</p>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+    const cart = [];
+    const cartList = document.getElementById('cart');
+    const totalDisplay = document.getElementById('total');
+
+    document.querySelectorAll('.add-to-cart').forEach(button => {
+        button.addEventListener('click', () => {
+            const packageName = button.getAttribute('data-name');
+            const packagePrice = parseFloat(button.getAttribute('data-price'));
+
+            cart.push({ name: packageName, price: packagePrice });
+            updateCart();
+        });
+    });
+
+    function updateCart() {
+        cartList.innerHTML = '';
+        let total = 0;
+
+        cart.forEach(item => {
+            const listItem = document.createElement('li');
+            listItem.textContent = `${item.name} - $${item.price.toFixed(2)}`;
+            cartList.appendChild(listItem);
+            total += item.price;
+        });
+
+        totalDisplay.textContent = `Total: $${total.toFixed(2)}`;
+    }
+});
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
+
